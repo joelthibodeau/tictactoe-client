@@ -1,1 +1,77 @@
 @import '~bootstrap/scss/bootstrap';
+
+body {
+  background-color: WhiteSmoke;
+  color: DimGrey;
+}
+
+.grid {
+  font-size: 1rem;
+  height: 80vh;
+  margin: 0 auto;
+  max-height: 60vh;
+  max-width: 60vh;
+  width: 80vh;
+}
+
+.row {
+  display: flex;
+}
+
+.box {
+  background: DimGrey;
+  border: 1px solid WhiteSmoke;
+  color: WhiteSmoke;
+  flex: 1 0 auto;
+  font-family: Helvetica;
+  font-size: 90px;
+  font-weight: bold;
+  margin: 0;
+  position: relative;
+}
+
+.box:after {
+  content: '';
+  display: block;
+  float: left;
+  padding-top: 100%;
+}
+
+.box .inner {
+  // background-color: red;
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.box:hover {
+  background-color: DarkGrey;
+  cursor: pointer;
+}
+
+.winner {
+  display: none;
+  padding: 10px;
+  font-family: Helvetica;
+  font-size: 15px;
+  color: Salmon;
+}
+
+.reset {
+  background-color: DimGrey;
+  border-radius: 8px;
+  color: WhiteSmoke;
+  font-size: 12px;
+  margin: 20px;
+  padding: 20px;
+}
+
+.flex-container {
+  display: flex;
+}
+// code based on: http://bluecaret.com/blog/responsive-grid-of-squares
