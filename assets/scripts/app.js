@@ -19,54 +19,60 @@ $(document).ready(function () {
   console.log('ready!')
 })
 
-$('.cell').click(function () {
+const onClickCell = function () {
   // finding odd numbers
-  movesMade++
-  console.log(movesMade)
   if (event.target.innerHTML === '') { // BEGIN FUNCTION FOR SECOND CLICK
+    console.log(`the starting inner html is: ${event.target.innerHTML}`)
+    movesMade++
+    console.log(`number of moves made: ${movesMade}`)
     if (movesMade % 2 === 1) {
       event.target.innerHTML = player_x
-      console.log('X')
+      console.log('currrent piece played is X')
     } else {
       event.target.innerHTML = player_o
-      console.log('O')
+      console.log('currrent piece played is O')
     }
+  } else {
+    console.log('not an empty string')
   }
-})
-
-const checkForWinner = function () {
-  const cell0 = document.GetElementById('cell0')
-  const cell1 = document.GetElementById('cell1')
-  const cell2 = document.GetElementById('cell2')
-  const cell3 = document.GetElementById('cell3')
-  const cell4 = document.GetElementById('cell4')
-  const cell5 = document.GetElementById('cell5')
-  const cell6 = document.GetElementById('cell6')
-  const cell7 = document.GetElementById('cell7')
-  const cell8 = document.GetElementById('cell8')
-
-  // check for all possible wins
-  // check all rows
-  if (cell0.innerHTML !== '' && cell0.innerHTML === cell1.innerHTML && cell0.innerHTML === cell2.innerHTML) {
-    console.log('win')
-  } else if (cell3.innerHTML !== '' && cell3.innerHTML === cell4.innerHTML && cell3.innerHTML === cell5.innerHTML) {
-    console.log('win')
-  } else if (cell6.innerHTML !== '' && cell6.innerHTML === cell7.innerHTML && cell6.innerHTML === cell8.innerHTML) {
-    console.log('win')
-    // check all columns
-  } else if (cell0.innerHTML !== '' && cell0.innerHTML === cell3.innerHTML && cell0.innerHTML === cell6.innerHTML) {
-    console.log('win')
-  } else if (cell1.innerHTML !== '' && cell1.innerHTML === cell4.innerHTML && cell1.innerHTML === cell7.innerHTML) {
-    console.log('win')
-  } else if (cell2.innerHTML !== '' && cell2.innerHTML === cell5.innerHTML && cell2.innerHTML === cell8.innerHTML) {
-    console.log('win')
-    // check diagonal l–>r, r–>l
-  } else if (cell0.innerHTML !== '' && cell0.innerHTML === cell4.innerHTML && cell0.innerHTML === cell8.innerHTML) {
-    console.log('win')
-  } else if (cell2.innerHTML !== '' && cell2.innerHTML === cell4.innerHTML && cell2.innerHTML === cell6.innerHTML) {
-    console.log('win')
-  }
+  console.log(`the ending inner html is: ${event.target.innerHTML}`)
 }
+
+$('.cell').click(onClickCell)
+
+// const checkForWinner = function () {
+//   const cell0 = document.GetElementById('cell0')
+//   const cell1 = document.GetElementById('cell1')
+//   const cell2 = document.GetElementById('cell2')
+//   const cell3 = document.GetElementById('cell3')
+//   const cell4 = document.GetElementById('cell4')
+//   const cell5 = document.GetElementById('cell5')
+//   const cell6 = document.GetElementById('cell6')
+//   const cell7 = document.GetElementById('cell7')
+//   const cell8 = document.GetElementById('cell8')
+//
+//   // check for all possible wins
+//   // check all rows
+//   if (cell0.innerHTML !== '' && cell0.innerHTML === cell1.innerHTML && cell0.innerHTML === cell2.innerHTML) {
+//     console.log('win')
+//   } else if (cell3.innerHTML !== '' && cell3.innerHTML === cell4.innerHTML && cell3.innerHTML === cell5.innerHTML) {
+//     console.log('win')
+//   } else if (cell6.innerHTML !== '' && cell6.innerHTML === cell7.innerHTML && cell6.innerHTML === cell8.innerHTML) {
+//     console.log('win')
+//     // check all columns
+//   } else if (cell0.innerHTML !== '' && cell0.innerHTML === cell3.innerHTML && cell0.innerHTML === cell6.innerHTML) {
+//     console.log('win')
+//   } else if (cell1.innerHTML !== '' && cell1.innerHTML === cell4.innerHTML && cell1.innerHTML === cell7.innerHTML) {
+//     console.log('win')
+//   } else if (cell2.innerHTML !== '' && cell2.innerHTML === cell5.innerHTML && cell2.innerHTML === cell8.innerHTML) {
+//     console.log('win')
+//     // check diagonal l–>r, r–>l
+//   } else if (cell0.innerHTML !== '' && cell0.innerHTML === cell4.innerHTML && cell0.innerHTML === cell8.innerHTML) {
+//     console.log('win')
+//   } else if (cell2.innerHTML !== '' && cell2.innerHTML === cell4.innerHTML && cell2.innerHTML === cell6.innerHTML) {
+//     console.log('win')
+//   }
+// }
 
 /*
 
