@@ -3,75 +3,94 @@
 body {
   background-color: WhiteSmoke;
   color: DimGrey;
+  font-family: 'Questrial', sans-serif;
 }
 
-.grid {
-  font-size: 1rem;
-  height: 80vh;
+.board {
+  // font-size: 1rem;
+  // height: 80vh;
+  height: 300px;
   margin: 0 auto;
-  max-height: 60vh;
-  max-width: 60vh;
-  width: 80vh;
+  // max-height: 45vh;
+  // max-height: 300px;
+  // max-width: 45vh;
+  // max-width: 300px;
+
+  // width: 80vh;
+  width: 300px;
 }
 
 .row {
   display: flex;
 }
 
-.box {
-  background: DimGrey;
-  border: 1px solid WhiteSmoke;
-  color: WhiteSmoke;
+.cell {
+  // background: DimGrey;
+  border: 1px solid DimGrey;
+  color: DimGrey;
   flex: 1 0 auto;
-  font-family: Helvetica;
-  font-size: 90px;
+  font-family: 'Catamaran', sans-serif;
+  font-size: 75px;
   font-weight: bold;
+  height: 100px;
   margin: 0;
   position: relative;
+  width: 100px;
+
+  &:hover {
+    // background-color: White;
+    cursor: pointer;
+  }
 }
 
-.box:after {
-  content: '';
-  display: block;
-  float: left;
-  padding-top: 100%;
-}
+// forces box to remain square.
+// .cell:after {
+//   content: '';
+//   // makes width stretch to 100%.
+//   display: block;
+//   float: left;
+//   // sets height to 100%, equal to width.
+//   padding-top: 100%;
+// }
 
-.box .inner {
-  // background-color: red;
-  align-items: center;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.box:hover {
-  background-color: DarkGrey;
-  cursor: pointer;
-}
+// .cell .text {
+//   align-items: center;
+//   bottom: 0;
+//   display: flex;
+//   justify-content: center;
+//   left: 0;
+//   position: absolute;
+//   right: 0;
+//   top: 0;
+// }
 
 .winner {
   display: none;
   padding: 10px;
-  font-family: Helvetica;
+  font-family: 'Catamaran', sans-serif;
   font-size: 15px;
   color: Salmon;
 }
 
 .reset {
-  background-color: DimGrey;
-  border-radius: 8px;
-  color: WhiteSmoke;
-  font-size: 12px;
+  background-color: WhiteSmoke;
+  border: solid WhiteSmoke;
+  border-radius: 4px;
+  color: DimGrey;
+  font-family: 'Questrial', sans-serif;
+  font-size: 15px;
   margin: 20px;
-  padding: 20px;
+  outline: none !important;
+  padding: 10px;
+
+  &:hover {
+    background-color: WhiteSmoke;
+    color: Tomato;
+    cursor: pointer;
+  }
 }
 
-.flex-container {
-  display: flex;
-}
+// .flex-container {
+//   display: flex;
+// }
 // code based on: http://bluecaret.com/blog/responsive-grid-of-squares

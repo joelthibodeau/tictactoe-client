@@ -8,68 +8,47 @@
 
 // const authEvents = require('./auth/events.js')
 // A $( document ).ready() block.
+
 /*
-
 $(document).ready(function () {
-  console.log('ready!')
-
   const player_x = 'X'
   const player_o = 'O'
   let movesMade = 0
-  let currentMove = 1
-  let play = true
-
-  $('.cell').click(function)() {
-    movesCompleted++
-    // finding odd numbers
-    if (event.target.innerHTML === '') { // BEGIN FUNCTION FOR SECOND CLICK
-      if (currentMove % 2 === 1) {
-        event.target.innerHTML = player_x
-        console.log('X')
-      } else {
-        event.target.innerHTML = player_o
-        console.log('O')
-  })
-      move++
-
-
-
-function checkForWinner () {
-    const cell0 = document.GetElementById('cell0')
-    const cell1 = document.GetElementById('cell1')
-    const cell2 = document.GetElementById('cell2')
-    const cell3 = document.GetElementById('cell3')
-    const cell4 = document.GetElementById('cell4')
-    const cell5 = document.GetElementById('cell5')
-    const cell6 = document.GetElementById('cell6')
-    const cell7 = document.GetElementById('cell7')
-    const cell8 = document.GetElementById('cell8')
-
-    // check for all possible wins
-    // check all rows
-    if (cell0.innerHTML !== '' && cell0.innerHTML === cell1.innerHTML && cell0.innerHTML === cell2.innerHTML) {
-      console.log('win')
-    } else if (cell3.innerHTML !== '' && cell3.innerHTML === cell4.innerHTML && cell3.innerHTML === cell5.innerHTML) {
-      console.log('win')
-    } else if (cell6.innerHTML !== '' && cell6.innerHTML === cell7.innerHTML && cell6.innerHTML === cell8.innerHTML) {
-      console.log('win')
-      // check all columns
-    } else if (cell0.innerHTML !== '' && cell0.innerHTML === cell3.innerHTML && cell0.innerHTML === cell6.innerHTML) {
-      console.log('win')
-    } else if (cell1.innerHTML !== '' && cell1.innerHTML === cell4.innerHTML && cell1.innerHTML === cell7.innerHTML) {
-      console.log('win')
-    } else if (cell2.innerHTML !== '' && cell2.innerHTML === cell5.innerHTML && cell2.innerHTML === cell8.innerHTML) {
-      console.log('win')
-      // check diagonal l–>r, r–>l
-    } else if (cell0.innerHTML !== '' && cell0.innerHTML === cell4.innerHTML && cell0.innerHTML === cell8.innerHTML) {
-      console.log('win')
-    } else if (cell2.innerHTML !== '' && cell2.innerHTML === cell4.innerHTML && cell2.innerHTML === cell6.innerHTML) {
-      console.log('win')
-    }
-  }
+  console.log('ready!')
 })
+
+let currentMove = 1
+
+// function checkForWin () {
+  const box0 = document.GetElementById('box0')
+  const box1 = document.GetElementById('box1')
+  const box2 = document.GetElementById('box1')
+  const box3 = document.GetElementById('box3')
+  const box4 = document.GetElementById('box4')
+  const box5 = document.GetElementById('box5')
+  const box6 = document.GetElementById('box6')
+  const box7 = document.GetElementById('box7')
+  const box8 = document.GetElementById('box8')
+// }
+// check for all possible wins
+if (box0.innerHTML !== '' && box0.innerHTML === box1.innerHTML && box0.innerHTML === box2.innerHTML) {
+  console.log('win')
+} else if (box3.innerHTML !== '' && box3.innerHTML === box4.innerHTML && box3.innerHTML === box5.innerHTML) {
+  console.log('win')
+} else if (box6.innerHTML !== '' && box6.innerHTML === box7.innerHTML && box6.innerHTML === box8.innerHTML) {
+  console.log('win')
+} else if (box0.innerHTML !== '' && box0.innerHTML === box3.innerHTML && box0.innerHTML === box6.innerHTML) {
+  console.log('win')
+} else if (box1.innerHTML !== '' && box1.innerHTML === box4.innerHTML && box1.innerHTML === box7.innerHTML) {
+    console.log('win')
+} else if (box2.innerHTML !== '' && box2.innerHTML === box5.innerHTML && box2.innerHTML === box8.innerHTML) {
+    console.log('win')
+} else if (box0.innerHTML !== '' && box0.innerHTML === box4.innerHTML && box0.innerHTML === box8.innerHTML) {
+    console.log('win')
+} else if (box2.innerHTML !== '' && box2.innerHTML === box4.innerHTML && box2.innerHTML === box6.innerHTML) {
+    console.log('win')
+}
 */
-/*
 
 $(() => {
   // your JS code goes here
@@ -161,5 +140,3 @@ $(() => {
     console.log(winner + ' wins!')
   }
 })
-
-*/

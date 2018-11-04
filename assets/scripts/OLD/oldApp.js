@@ -25,9 +25,9 @@ $(() => {
   const box = $('.box')
   const winnerContainer = $('.winner')
   const reset = $('.reset')
-  const makeMove = function  (e){
-    //code here
-}
+//   /const makeMove = function (e) {
+//     //code here
+// }
 
   box.on('click', function () {
 
