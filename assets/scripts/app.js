@@ -8,8 +8,8 @@
 
 // const authEvents = require('./auth/events.js')
 // A $( document ).ready() block.
-const player_x = 'X'
-const player_o = 'O'
+// const player_x = 'X'
+// const player_o = 'O'
 let movesMade = 0
 // let currentMove = 1
 // let play = true
@@ -26,16 +26,18 @@ const onClickCell = function () {
     movesMade++
     console.log(`number of moves made: ${movesMade}`)
     if (movesMade % 2 === 1) {
-      event.target.innerHTML = player_x
+      event.target.innerHTML = 'X'
       console.log('currrent piece played is X')
     } else {
-      event.target.innerHTML = player_o
+      event.target.innerHTML = 'O'
       console.log('currrent piece played is O')
     }
+    // else statement from first if statement.
   } else {
     console.log('not an empty string')
   }
   console.log(`the ending inner html is: ${event.target.innerHTML}`)
+  console.log(cells)
 }
 
 $('.cell').click(onClickCell)
