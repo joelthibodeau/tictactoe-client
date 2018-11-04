@@ -11,8 +11,8 @@
 const player_x = 'X'
 const player_o = 'O'
 let movesMade = 0
-let currentMove = 1
-let play = true
+// let currentMove = 1
+// let play = true
 const cells = ['', '', '', '', '', '', '', '', '']
 
 $(document).ready(function () {
@@ -20,10 +20,11 @@ $(document).ready(function () {
 })
 
 $('.cell').click(function () {
-  movesMade++
   // finding odd numbers
+  movesMade++
+  console.log(movesMade)
   if (event.target.innerHTML === '') { // BEGIN FUNCTION FOR SECOND CLICK
-    if (currentMove % 2 === 1) {
+    if (movesMade % 2 === 1) {
       event.target.innerHTML = player_x
       console.log('X')
     } else {
