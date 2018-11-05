@@ -15,7 +15,6 @@ body {
   // max-height: 300px;
   // max-width: 45vh;
   // max-width: 300px;
-
   // width: 80vh;
   width: 300px;
 }
@@ -26,19 +25,49 @@ body {
 
 .cell {
   // background: DimGrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 1px solid DimGrey;
   color: DimGrey;
   flex: 1 0 auto;
   font-family: 'Catamaran', sans-serif;
   font-size: 75px;
-  font-weight: bold;
+  // font-weight: bold;
   height: 100px;
   margin: 0;
   position: relative;
+  // text-transform: uppercase;
   width: 100px;
 
   &:hover {
     // background-color: White;
+    cursor: pointer;
+  }
+}
+
+.winner {
+  // display: none;
+  padding: 25px;
+  font-family: 'Questrial', sans-serif;
+  font-size: 20px;
+  color: SeaGreen;
+}
+
+.reset {
+  background-color: WhiteSmoke;
+  border: solid WhiteSmoke;
+  border-radius: 4px;
+  color: DimGrey;
+  font-family: 'Questrial', sans-serif;
+  font-size: 15px;
+  margin: 20px;
+  outline: none !important;
+  padding: 10px;
+
+  &:hover {
+    background-color: WhiteSmoke;
+    color: Tomato;
     cursor: pointer;
   }
 }
@@ -64,31 +93,6 @@ body {
 //   top: 0;
 // }
 
-.winner {
-  // display: none;
-  padding: 10px;
-  font-family: 'Catamaran', sans-serif;
-  font-size: 15px;
-  color: Salmon;
-}
-
-.reset {
-  background-color: WhiteSmoke;
-  border: solid WhiteSmoke;
-  border-radius: 4px;
-  color: DimGrey;
-  font-family: 'Questrial', sans-serif;
-  font-size: 15px;
-  margin: 20px;
-  outline: none !important;
-  padding: 10px;
-
-  &:hover {
-    background-color: WhiteSmoke;
-    color: Tomato;
-    cursor: pointer;
-  }
-}
 
 // .flex-container {
 //   display: flex;

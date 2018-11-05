@@ -38,11 +38,11 @@ const onClickCell = function () {
     movesMade++
     console.log(`number of moves made: ${movesMade}`)
     if (movesMade % 2 === 1) {
-      event.target.innerHTML = 'X'
-      currentPlayer = 'X'
+      event.target.innerHTML = 'x'
+      currentPlayer = 'x'
     } else {
-      event.target.innerHTML = 'O'
-      currentPlayer = 'O'
+      event.target.innerHTML = 'o'
+      currentPlayer = 'o'
     }
     // else statement from first if statement.
   } else {
@@ -84,7 +84,7 @@ const isAWinner = function () {
 
 const isADraw = function () {
   over = true
-  $('.winner').html(`It's a draw!`)
+  $('.winner').html(`it's a draw!`)
   console.log(`Is the game over: ${over}`)
   console.log(`It's a draw.`)
 }
