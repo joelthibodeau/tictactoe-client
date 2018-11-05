@@ -27,6 +27,7 @@ const cell8 = document.getElementById('cell8')
 // creates array with 9 empty strings as values.
 let cells = ['', '', '', '', '', '', '', '', '']
 let over = false
+let currentPlayer = null
 
 // onClickCell plays X if movesMade is odd.
 // It playes O if movesMade is even.
@@ -38,15 +39,16 @@ const onClickCell = function () {
     console.log(`number of moves made: ${movesMade}`)
     if (movesMade % 2 === 1) {
       event.target.innerHTML = 'X'
-      console.log('currrent piece played is X')
+      currentPlayer = 'X'
     } else {
       event.target.innerHTML = 'O'
-      console.log('currrent piece played is O')
+      currentPlayer = 'O'
     }
     // else statement from first if statement.
   } else {
     console.log('not an empty string')
   }
+  console.log(`currrent piece played is ${currentPlayer}`)
   console.log(`the ending inner html is: ${event.target.innerHTML}`)
   console.log(cells)
   console.log(`Is the game over: ${over}`)
@@ -59,12 +61,14 @@ $('.cell').click(onClickCell)
 
 const isAWinner = function () {
   over = true
+  $('.winner').html(`${currentPlayer} wins!`)
   console.log(`Is the game over: ${over}`)
   console.log('win')
 }
 
 const isADraw = function () {
   over = true
+  $('.winner').html(`It's a draw!`)
   console.log(`Is the game over: ${over}`)
   console.log(`It's a draw.`)
 }
@@ -95,6 +99,9 @@ const checkForWinner = function () {
     isADraw()
   }
 }
+
+// possible future jQuery solution.
+// if ($('#cell0').html !== '' && cell0.innerHTML === cell1.innerHTML && cell0.innerHTML === cell2.innerHTML) {
 
 /*
 
