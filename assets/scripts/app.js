@@ -63,6 +63,12 @@ const isAWinner = function () {
   console.log('win')
 }
 
+const isADraw = function () {
+  over = true
+  console.log(`Is the game over: ${over}`)
+  console.log(`It's a draw.`)
+}
+
 const checkForWinner = function () {
   console.log('check for winner runs')
   // check for all possible wins
@@ -85,6 +91,8 @@ const checkForWinner = function () {
     isAWinner()
   } else if (cell2.innerHTML !== '' && cell2.innerHTML === cell4.innerHTML && cell2.innerHTML === cell6.innerHTML) {
     isAWinner()
+  } else if (movesMade === 9) {
+    isADraw()
   }
 }
 
