@@ -59,6 +59,22 @@ const onClickCell = function () {
 
 $('.cell').click(onClickCell)
 
+const onClickReset = function () {
+  movesMade = 0
+  cells = ['', '', '', '', '', '', '', '', '']
+  over = false
+  currentPlayer = null
+  $('.winner').html('')
+  $('.cell').html('')
+
+  console.log(`currrent piece played is ${currentPlayer}`)
+  console.log(cells)
+  console.log(`Is the game over: ${over}`)
+  console.log(`number of moves made: ${movesMade}`)
+}
+
+$('.reset').click(onClickReset)
+
 const isAWinner = function () {
   over = true
   $('.winner').html(`${currentPlayer} wins!`)
