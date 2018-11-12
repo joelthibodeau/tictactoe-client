@@ -4,6 +4,7 @@
       <title>Tic Tac Toe • WDI Project 1</title>
       <link href="https://fonts.googleapis.com/css?family=Droid+Serif|Raleway:400,500,600,700" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200" rel="stylesheet">
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -16,13 +17,81 @@
 
     </head>
     <body>
-      <div class="container">
-      <center>
-      <h1>tic tac toe</h1>
-      <div class="sign-up"></div>
-      <div><button class="reset">reset</button></div>
-      </center>
+      <!-- <div class="container"> -->
+        <div>
+          <center>
+            <h1>tic tac toe</h1>
+          </center>
+        </div>
+
+      <div class="buttons-container">
+      <!-- <div class="sign-up"></div> -->
+       <div><button class="reset">reset</button></div>
+       <div> • </div>
+       <div><button type="button" class="signup" data-toggle="modal" data-target="#signUpModal">sign up</button>
+       </div>
       </div>
+
+      <!-- MODALS -->
+
+        <div class="modal fade" id="signUpModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="signUpModalLabel"></h5>
+                <button type="button" class="signup" data-dismiss="modal"><span>&times;</span></button>
+                </div>
+
+                <div class="modal-body">
+                  <form id="sign-up" class="border">
+                      <fieldset>
+                        <!-- <legend>Sign up!</legend> -->
+                          <input type="text" name="credentials[email]" placeholder="email">
+                          <input type="password" name="credentials[password]" placeholder="password">
+                          <input type="password" name="credentials[password_confirmation]" placeholder="confirm password">
+                          <br>
+                          <input type="submit" value="sign up" class="modal-signup">
+                      </fieldset>
+                  </form>
+
+                  <form id="sign-in" class="border">
+                       <fieldset>
+                         <!-- <legend></legend> -->
+                         <input type="text" name="credentials[email]" placeholder="email">
+                         <input type="password" name="credentials[password]" placeholder="password">
+                         <br>
+                         <input type="submit" value="sign in">
+                       </fieldset>
+                 </form>
+
+                 <form id="change-password" class="border">
+                      <fieldset>
+                       <!-- <legend></legend> -->
+                       <input type="password" name="passwords[old]" placeholder="old password">
+                       <input type="password" name="passwords[new]" placeholder="new password">
+                       <br>
+                       <input type="submit" value="change password">
+                     </fieldset>
+                   </form>
+
+                 <form id="sign-out" class="border">
+                     <fieldset>
+                       <!-- <legend></legend> -->
+                       <input type="submit" value="sign out" data-dismiss="modal">
+                     </fieldset>
+                  </form>
+
+              </div>
+
+
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">close</button>
+                <!-- <button type="button" class="btn btn-primary">SAVE</button> -->
+              </div>
+            </div>
+          </div>
+        </div>
 
       <div class="board">
 

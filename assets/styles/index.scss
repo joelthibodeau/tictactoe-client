@@ -26,16 +26,17 @@ body {
 
 .cell {
   // background: DimGrey;
-  display: flex;
-  justify-content: center;
   align-items: center;
   border: 1px solid DimGrey;
   color: DimGrey;
+  display: flex;
   flex: 1 0 auto;
-  font-family: 'Catamaran', sans-serif;
+  // font-family: 'Catamaran', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 75px;
-  // font-weight: bold;
   height: 100px;
+  justify-content: center;
+  // font-weight: bold;
   margin: 0;
   position: relative;
   // text-transform: uppercase;
@@ -49,10 +50,16 @@ body {
 
 .winner {
   // display: none;
-  padding: 25px;
-  font-family: 'Questrial', sans-serif;
+  color: DarkKhaki;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 20px;
-  color: SeaGreen;
+  padding: 25px;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .reset {
@@ -60,18 +67,72 @@ body {
   border: solid WhiteSmoke;
   border-radius: 4px;
   color: DimGrey;
+  display: inline-block;
   font-family: 'Questrial', sans-serif;
   font-size: 15px;
-  margin: 20px;
+  // margin: 12px;
   outline: none !important;
-  padding: 10px;
+  // padding: 20px;
 
   &:hover {
     background-color: WhiteSmoke;
-    color: Tomato;
+    color: DarkKhaki;
     cursor: pointer;
   }
 }
+
+.signup {
+  background-color: WhiteSmoke;
+  border: solid WhiteSmoke;
+  border-radius: 4px;
+  color: DimGrey;
+  display: inline-block;
+  font-family: 'Questrial', sans-serif;
+  font-size: 15px;
+  // margin: 12px;
+  outline: none !important;
+  // padding: 20px;
+
+  &:hover {
+    background-color: WhiteSmoke;
+    color: DarkKhaki;
+    cursor: pointer;
+  }
+}
+
+.modal-signup {
+  background-color: DarkKhaki;
+  border: solid DarkKhaki;
+  border-radius: 4px;
+  color: DimGrey;
+  display: inline-block;
+  font-family: 'Questrial', sans-serif;
+  font-size: 15px;
+  // margin: 12px;
+  outline: none !important;
+  // padding: 20px;
+
+  &:hover {
+    background-color: DarkKhaki;
+    border: solid DarkKhaki;
+    border-radius: 4px;
+    color: WhiteSmoke;
+    cursor: pointer;
+  }
+}
+
+// .signup {
+//   background-color: Tomato;
+//   // border: solid WhiteSmoke;
+//   border-radius: 4px;
+//   color: WhiteSmoke;
+//   font-family: 'Questrial', sans-serif;
+//   font-size: 15px;
+//   margin: 20px;
+//   outline: none !important;
+//   padding: 10px;
+//
+// }
 
 // forces box to remain square.
 // .cell:after {

@@ -1,12 +1,15 @@
+# TOKEN=<token> OLD_PASSWORD=123 NEW_PASSWORD=321 sh curl-scripts/json/change-password.sh
 
-#!/bin/bash
-
-curl --include --request PATCH https://aqueous-atoll-85096.herokuapp.com/change-password \
-  --header "Authorization: Token token=$TOKEN" \
+curl "https://tic-tac-toe-wdi.herokuapp.com/change-password" \
+  --include \
+  --request PATCH \
   --header "Content-Type: application/json" \
+  --header "Authorization: Token token=${TOKEN}" \
   --data '{
     "passwords": {
-      "old": "an example password",
-      "new": "super sekrit"
+      "old": "'"${OLD_PASSWORD}"'",
+      "new": "'"${NEW_PASSWORD}"'"
     }
   }'
+
+echo

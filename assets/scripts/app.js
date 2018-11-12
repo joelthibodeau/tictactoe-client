@@ -9,8 +9,15 @@
 // const authEvents = require('./auth/events.js')
 
 // A $( document ).ready() block.
+const authEvents = require('./auth/events.js')
+
 $(document).ready(function () {
   // console.log('ready!')
+  $('#sign-up').on('submit', authEvents.onSignUp)
+  $('#sign-in').on('submit', authEvents.onSignIn)
+  $('#change-password').on('submit', authEvents.onChangePassword)
+  $('#sign-out').on('submit', authEvents.onSignOut)
+  // $('.cell').on('click', .onClickCell)
 })
 
 let movesMade = 0
@@ -24,6 +31,8 @@ const cell6 = document.getElementById('cell6')
 const cell7 = document.getElementById('cell7')
 const cell8 = document.getElementById('cell8')
 
+// $('#sign-up').on('submit', authEvents.onSignUp)
+
 // creates array with 9 empty strings as values.
 let cells = ['', '', '', '', '', '', '', '', '']
 let over = false
@@ -34,9 +43,9 @@ let currentPlayer = null
 const onClickCell = function () {
   // if statement for when cell is unplayed.
   if (event.target.innerHTML === '' && over === false) {
-    // console.log(`the starting inner html is: ${event.target.innerHTML}`)
+    console.log(`the starting inner html is: ${event.target.innerHTML}`)
     movesMade++
-    // console.log(`number of moves made: ${movesMade}`)
+    console.log(`number of moves made: ${movesMade}`)
     if (movesMade % 2 === 1) {
       event.target.innerHTML = 'x'
       currentPlayer = 'x'
@@ -46,12 +55,12 @@ const onClickCell = function () {
     }
     // else statement from first if statement.
   } else {
-    // console.log('not an empty string')
+    console.log('not an empty string')
   }
-  // console.log(`currrent piece played is ${currentPlayer}`)
-  // console.log(`the ending inner html is: ${event.target.innerHTML}`)
-  // console.log(cells)
-  // console.log(`Is the game over: ${over}`)
+  console.log(`currrent piece played is ${currentPlayer}`)
+  console.log(`the ending inner html is: ${event.target.innerHTML}`)
+  console.log(cells)
+  console.log(`Is the game over: ${over}`)
   if (over === false) {
     checkForWinner()
   }
@@ -67,10 +76,10 @@ const onClickReset = function () {
   $('.winner').html('')
   $('.cell').html('')
 
-  // console.log(`currrent piece played is ${currentPlayer}`)
-  // console.log(cells)
-  // console.log(`Is the game over: ${over}`)
-  // console.log(`number of moves made: ${movesMade}`)
+  console.log(`currrent piece played is ${currentPlayer}`)
+  console.log(cells)
+  console.log(`Is the game over: ${over}`)
+  console.log(`number of moves made: ${movesMade}`)
 }
 
 $('.reset').click(onClickReset)
@@ -78,19 +87,19 @@ $('.reset').click(onClickReset)
 const isAWinner = function () {
   over = true
   $('.winner').html(`${currentPlayer} wins!`)
-  // console.log(`Is the game over: ${over}`)
-  // console.log('win')
+  console.log(`Is the game over: ${over}`)
+  console.log('win')
 }
 
 const isADraw = function () {
   over = true
   $('.winner').html(`it's a draw!`)
-  // console.log(`Is the game over: ${over}`)
-  // console.log(`It's a draw.`)
+  console.log(`Is the game over: ${over}`)
+  console.log(`It's a draw.`)
 }
 
 const checkForWinner = function () {
-  // console.log('check for winner runs')
+  console.log('check for winner runs')
   // check for all possible wins
   // check all rows
   if (cell0.innerHTML !== '' && cell0.innerHTML === cell1.innerHTML && cell0.innerHTML === cell2.innerHTML) {
