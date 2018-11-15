@@ -28,8 +28,9 @@
       <!-- <div class="sign-up"></div> -->
        <div><button class="reset">reset</button></div>
        <div> • </div>
-       <div><button type="button" class="signup" data-toggle="modal" data-target="#signUpModal">sign up</button>
-       </div>
+       <div><button type="button" class="menu-buttons" data-toggle="modal" data-target="#signUpModal">sign up</button></div>
+       <div> • </div>
+       <div><button type="button" class="menu-buttons" data-toggle="modal" data-target="#signUpModal">sign in</button></div>
       </div>
 
       <!-- MODALS -->
@@ -41,11 +42,9 @@
                 <h5 class="modal-title" id="signUpModalLabel"></h5>
                 <button type="button" data-dismiss="modal"><span>&times;</span></button>
                 </div>
-
                 <div class="modal-body">
                   <form id="sign-up" class="border">
                       <fieldset>
-                        <!-- <legend>Sign up!</legend> -->
                           <input type="text" name="credentials[email]" placeholder="email">
                           <input type="password" name="credentials[password]" placeholder="password">
                           <input type="password" name="credentials[password_confirmation]" placeholder="confirm password">
@@ -53,46 +52,39 @@
                           <input type="submit" value="sign up" class="modal-signup">
                       </fieldset>
                   </form>
-
-                  <form id="sign-in" class="border">
-                       <fieldset>
-                         <!-- <legend></legend> -->
-                         <input type="text" name="credentials[email]" placeholder="email">
-                         <input type="password" name="credentials[password]" placeholder="password">
-                         <br>
-                         <input type="submit" value="sign in" class="modal-signin">
-                       </fieldset>
-                 </form>
-
-                 <form id="change-password" class="border">
-                      <fieldset>
-                       <!-- <legend></legend> -->
-                       <input type="password" name="passwords[old]" placeholder="old password">
-                       <input type="password" name="passwords[new]" placeholder="new password">
-                       <br>
-                       <input type="submit" value="change" class="modal-change-password">
-                     </fieldset>
-                   </form>
-
-                 <form id="sign-out" class="border">
-                     <fieldset>
-                       <!-- <legend></legend> -->
-                       <!-- <input type="submit" value="sign out" data-dismiss="modal" class="modal-signout"> -->
-                       <input type="submit" value="sign out" class="modal-signout">
-                     </fieldset>
-                  </form>
-
               </div>
-
-
-
               <!-- <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">close</button>
-
               </div> -->
             </div>
           </div>
         </div>
+
+        <!-- <input type="submit" value="sign out" data-dismiss="modal" class="modal-signout"> -->
+
+        <!-- <form id="sign-in" class="border">
+        <fieldset>
+        <input type="text" name="credentials[email]" placeholder="email">
+        <input type="password" name="credentials[password]" placeholder="password">
+        <br>
+        <input type="submit" value="sign in" class="modal-signin">
+      </fieldset>
+    </form>
+
+    <form id="change-password" class="border">
+    <fieldset>
+    <input type="password" name="passwords[old]" placeholder="old password">
+    <input type="password" name="passwords[new]" placeholder="new password">
+    <br>
+    <input type="submit" value="change" class="modal-change-password">
+  </fieldset>
+</form>
+
+<form id="sign-out" class="border">
+<fieldset>
+<input type="submit" value="sign out" class="modal-signout">
+</fieldset>
+</form> -->
 
       <div class="board-container">
       <div class="board">
