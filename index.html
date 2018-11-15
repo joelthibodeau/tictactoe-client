@@ -26,11 +26,18 @@
 
       <div class="buttons-container">
       <!-- <div class="sign-up"></div> -->
-       <div><button class="reset">reset</button></div>
-       <div> • </div>
-       <div><button type="button" class="menu-buttons" data-toggle="modal" data-target="#signUpModal">sign up</button></div>
-       <div> • </div>
-       <div><button type="button" class="menu-buttons" data-toggle="modal" data-target="#signInModal">sign in</button></div>
+        <div><button class="reset">reset</button></div>
+        <div> • </div>
+        <div id="not-signed-in">
+          <div><button type="button" class="menu-buttons" data-toggle="modal" data-target="#signUpModal">sign up</button></div>
+          <div> • </div>
+          <div><button type="button" class="menu-buttons" data-toggle="modal" data-target="#signInModal">sign in</button></div>
+        </div>
+        <div id="signed-in">
+          <div><button type="button" class="menu-buttons" data-toggle="modal" data-target="#changePasswordModal">change password</button></div>
+          <div> • </div>
+          <div><button type="button" class="menu-buttons" data-toggle="modal" data-target="#signOutModal">sign out</button></div>
+        </div>
       </div>
 
       <!-- MODALS -->
