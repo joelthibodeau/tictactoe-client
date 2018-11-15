@@ -30,7 +30,7 @@
        <div> • </div>
        <div><button type="button" class="menu-buttons" data-toggle="modal" data-target="#signUpModal">sign up</button></div>
        <div> • </div>
-       <div><button type="button" class="menu-buttons" data-toggle="modal" data-target="#signUpModal">sign in</button></div>
+       <div><button type="button" class="menu-buttons" data-toggle="modal" data-target="#signInModal">sign in</button></div>
       </div>
 
       <!-- MODALS -->
@@ -59,6 +59,58 @@
             </div>
           </div>
         </div>
+
+       <!-- SING UP MODAL BEGINS -->
+        <div class="modal fade" id="signInModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="signInModalLabel"></h5>
+                <button type="button" data-dismiss="modal"><span>&times;</span></button>
+                </div>
+                <div class="modal-body">
+                  <form id="sign-in" class="border">
+                    <fieldset>
+                      <input type="text" name="credentials[email]" placeholder="email">
+                      <input type="password" name="credentials[password]" placeholder="password">
+                      <br>
+                      <input type="submit" value="sign in" class="modal-signin">
+                    </fieldset>
+                  </form>
+                </div>
+              <!-- <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">close</button>
+              </div> -->
+            </div>
+          </div>
+        </div>
+
+      <!-- CHANGE PASSWORD MODAL BEGINS -->
+        <div class="modal fade" id="changePasswordModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="changePasswordModalLabel"></h5>
+                <button type="button" data-dismiss="modal"><span>&times;</span></button>
+                </div>
+                <div class="modal-body">
+                  <form id="change-password" class="border">
+                    <fieldset>
+                      <input type="password" name="passwords[old]" placeholder="old password">
+                      <input type="password" name="passwords[new]" placeholder="new password">
+                      <br>
+                      <input type="submit" value="change" class="modal-change-password">
+                    </fieldset>
+                  </form>
+               </div>
+              <!-- <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">close</button>
+              </div> -->
+            </div>
+          </div>
+        </div>
+
+
 
         <!-- <input type="submit" value="sign out" data-dismiss="modal" class="modal-signout"> -->
 
