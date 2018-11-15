@@ -26,17 +26,19 @@
 
       <div class="buttons-container">
       <!-- <div class="sign-up"></div> -->
-        <div><button class="reset">reset</button></div>
-        <div> • </div>
-        <div id="not-signed-in">
-          <div><button type="button" class="menu-buttons" data-toggle="modal" data-target="#signUpModal">sign up</button></div>
-          <div> • </div>
-          <div><button type="button" class="menu-buttons" data-toggle="modal" data-target="#signInModal">sign in</button></div>
+        <div id="signed-out">
+          <span><button class="reset">reset</button></span>
+          <span> • </span>
+          <span><button type="button" class="menu-buttons" data-toggle="modal" data-target="#signUpModal">sign up</button></span>
+          <span> • </span>
+          <span><button type="button" class="menu-buttons" data-toggle="modal" data-target="#signInModal">sign in</button></span>
         </div>
         <div id="signed-in">
-          <div><button type="button" class="menu-buttons" data-toggle="modal" data-target="#changePasswordModal">change password</button></div>
-          <div> • </div>
-          <div><button type="button" class="menu-buttons" data-toggle="modal" data-target="#signOutModal">sign out</button></div>
+          <span><button class="reset">reset</button></span>
+          <span> • </span>
+          <span><button type="button" class="menu-buttons" data-toggle="modal" data-target="#changePasswordModal">change password</button></span>
+          <span> • </span>
+          <span><button type="button" class="menu-buttons" data-toggle="modal" data-target="#signOutModal">sign out</button></span>
         </div>
       </div>
 
@@ -190,7 +192,8 @@
           <div id="cell7" style="border-bottom: none;"class="cell"></div>
           <div id="cell8" style="border-right: transparent; border-bottom: transparent;" class="cell"></div>
         </div>
-        <div align="center" class='winner'></div>
+        <div  class='winner'></div>
+        <div id='message' class='message'></div>
       </div>
     </div>
 

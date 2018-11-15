@@ -13,6 +13,7 @@ const authEvents = require('./auth/events.js')
 
 $(document).ready(function () {
   // console.log('ready!')
+  $('#signed-in').hide()
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#change-password').on('submit', authEvents.onChangePassword)
