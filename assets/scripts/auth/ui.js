@@ -32,6 +32,21 @@ const signInFailure = error => {
   console.error('signInFailure ran. Error is :', error)
 }
 
+const changePasswordSuccess = data => {
+  // console.log(data.user.token)
+  $('#message').text('Changed password successfully')
+  $('#message').removeClass()
+  $('#message').addClass('success')
+  console.log('changedPasswordSuccess ran. Data is:', data)
+}
+
+const changePasswordFailure = error => {
+  $('#message').text('Error changing password')
+  $('#message').removeClass()
+  $('#message').addClass('failure')
+  console.error('changedPasswordFailure ran. Error is :', error)
+}
+
 const signOutSuccess = data => {
   $('#message').text('Signed out successfully')
   store.user = {} // or = null
@@ -52,6 +67,8 @@ module.exports = {
   signUpFailure,
   signInSuccess,
   signInFailure,
+  changePasswordSuccess,
+  changePasswordFailure,
   signOutSuccess,
   signOutFailure
 }

@@ -19,6 +19,17 @@ const signIn = data => {
   })
 }
 
+const changePassword = data => {
+  return $.ajax({
+    url: config.apiUrl + '/change-password',
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: data
+  })
+}
+
 const signOut = () => {
   return $.ajax({
     url: config.apiUrl + '/sign-out',
@@ -32,5 +43,6 @@ const signOut = () => {
 module.exports = {
   signUp,
   signIn,
+  changePassword,
   signOut
 }

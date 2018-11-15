@@ -52,7 +52,7 @@ body {
   // display: none;
   color: DarkKhaki;
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 20px;
+  font-size: 25px;
   padding: 25px;
 }
 
@@ -60,6 +60,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 30px;
 }
 
 .reset {
@@ -111,6 +112,7 @@ body {
   // margin: 12px;
   outline: none !important;
   // padding: 20px;
+  width: 75px;
 
   &:hover {
     background-color: DarkKhaki;
@@ -118,7 +120,81 @@ body {
     border-radius: 4px;
     color: WhiteSmoke;
     cursor: pointer;
+    width: 75px;
   }
+}
+
+.modal-signin {
+  background-color: #bc9881;
+  border: solid #bc9881;
+  border-radius: 4px;
+  color: DimGrey;
+  display: inline-block;
+  font-family: 'Questrial', sans-serif;
+  font-size: 15px;
+  // margin: 12px;
+  outline: none !important;
+  // padding: 20px;
+  width: 75px;
+
+  &:hover {
+    background-color: #bc9881;
+    border: solid #bc9881;
+    border-radius: 4px;
+    color: WhiteSmoke;
+    cursor: pointer;
+    width: 75px;
+  }
+}
+
+.modal-change-password {
+  background-color: #b0a591;
+  border: solid #b0a591;
+  border-radius: 4px;
+  color: DimGrey;
+  display: inline-block;
+  font-family: 'Questrial', sans-serif;
+  font-size: 15px;
+  // margin: 12px;
+  outline: none !important;
+  // padding: 20px;
+  width: 75px;
+
+  &:hover {
+    background-color: #b0a591;
+    border: solid #b0a591;
+    border-radius: 4px;
+    color: WhiteSmoke;
+    cursor: pointer;
+    width: 75px;
+  }
+}
+
+.modal-signout {
+  background-color: #bc8b8b;
+  border: solid #bc8b8b;
+  border-radius: 4px;
+  color: DimGrey;
+  display: inline-block;
+  font-family: 'Questrial', sans-serif;
+  font-size: 15px;
+  // margin: 12px;
+  outline: none !important;
+  // padding: 20px;
+  width: 75px;
+
+  &:hover {
+    background-color: #bc8b8b;
+    border: solid #bc8b8b;
+    border-radius: 4px;
+    color: WhiteSmoke;
+    cursor: pointer;
+    width: 75px;
+  }
+}
+
+.modal-backdrop {
+   background-color: WhiteSmoke;
 }
 
 // .signup {

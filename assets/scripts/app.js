@@ -17,6 +17,7 @@ $(document).ready(function () {
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('submit', authEvents.onSignOut)
+  // $('.cell').on('click', events.onClickCell)
   // $('.cell').on('click', .onClickCell)
 })
 
@@ -41,6 +42,7 @@ let currentPlayer = null
 // onClickCell plays X if movesMade is odd.
 // It playes O if movesMade is even.
 const onClickCell = function () {
+  const index = $(event.target).attr("class").replace('cell id', '')
   // if statement for when cell is unplayed.
   if (event.target.innerHTML === '' && over === false) {
     console.log(`the starting inner html is: ${event.target.innerHTML}`)
