@@ -10,7 +10,7 @@ const emptyMessage = () => {
 
 const signUpSuccess = data => {
   $('.message').text('signed up successfully')
-  $('.message').attr('class', 'message') // removes all classes except the default of 'message'
+  $('.message').attr('class', 'message') // removes all classes except the default class of 'message'
   $('.message').addClass('success')
   console.log('signUpSucces ran. Data is:', data)
   emptyMessage()

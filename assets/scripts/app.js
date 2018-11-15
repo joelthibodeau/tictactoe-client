@@ -18,6 +18,14 @@ $(document).ready(function () {
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('submit', authEvents.onSignOut)
+
+  $('body').on('hidden.bs.modal', '.modal', function () {
+    $(this).find('input[type="text"], input[type="password"],textarea,select').each(function () {
+      if (this.defaultValue !== '' || this.value !== this.defaultValue) {
+        this.value = this.defaultValue
+      } else { this.value = '' }
+    })
+  })
   // $('.cell').on('click', events.onClickCell)
   // $('.cell').on('click', .onClickCell)
 })
