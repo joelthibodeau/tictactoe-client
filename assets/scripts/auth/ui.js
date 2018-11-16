@@ -37,7 +37,7 @@ const signInSuccess = data => {
 }
 
 const signInFailure = error => {
-  $('.message').text('Error on sign in')
+  $('.message').text('error on sign in')
   $('.message').attr('class', 'message')
   $('.message').addClass('failure')
   console.error('signInFailure ran. Error is :', error)
@@ -73,7 +73,7 @@ const signOutSuccess = data => {
 }
 
 const signOutFailure = error => {
-  $('.message').text('Error on sign out')
+  $('.message').text('error on sign out')
   $('.message').attr('class', 'message')
   $('.message').addClass('failure')
   console.error('signOutFailure ran. Error is :', error)
