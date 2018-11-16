@@ -28,16 +28,16 @@
       <!-- <div class="sign-up"></div> -->
         <div id="signed-out">
           <span><button class="reset">reset</button></span>
-          <span> • </span>
+          <span> | </span>
           <span><button type="button" class="menu-buttons" data-toggle="modal" data-target="#signUpModal">sign up</button></span>
-          <span> • </span>
+          <span> | </span>
           <span><button type="button" class="menu-buttons" data-toggle="modal" data-target="#signInModal">sign in</button></span>
         </div>
         <div id="signed-in">
           <span><button class="reset">reset</button></span>
-          <span> • </span>
+          <span> | </span>
           <span><button type="button" class="menu-buttons" data-toggle="modal" data-target="#changePasswordModal">change password</button></span>
-          <span> • </span>
+          <span> | </span>
           <span><button type="button" class="menu-buttons" data-toggle="modal" data-target="#signOutModal">sign out</button></span>
         </div>
       </div>
@@ -52,7 +52,7 @@
                 <button type="button" data-dismiss="modal"><span>&times;</span></button>
                 </div>
                 <div class="modal-body">
-                  <form id="sign-up" class="border">
+                  <form id="sign-up">
                       <fieldset>
                         <legend>sign up</legend>
                           <input type="text" name="credentials[email]" placeholder="email">
@@ -79,7 +79,7 @@
                 <button type="button" data-dismiss="modal"><span>&times;</span></button>
                 </div>
                 <div class="modal-body">
-                  <form id="sign-in" class="border">
+                  <form id="sign-in">
                     <fieldset>
                       <legend>sign in</legend>
                       <input type="text" name="credentials[email]" placeholder="email">
@@ -105,7 +105,7 @@
                 <button type="button" data-dismiss="modal"><span>&times;</span></button>
                 </div>
                 <div class="modal-body">
-                  <form id="change-password" class="border">
+                  <form id="change-password">
                     <fieldset>
                       <legend>change password</legend>
                       <input type="password" name="passwords[old]" placeholder="old password">
