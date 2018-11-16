@@ -31,15 +31,15 @@ $(document).ready(function () {
 })
 
 let movesMade = 0
-const cell0 = document.getElementById('cell0')
-const cell1 = document.getElementById('cell1')
-const cell2 = document.getElementById('cell2')
-const cell3 = document.getElementById('cell3')
-const cell4 = document.getElementById('cell4')
-const cell5 = document.getElementById('cell5')
-const cell6 = document.getElementById('cell6')
-const cell7 = document.getElementById('cell7')
-const cell8 = document.getElementById('cell8')
+const cell0 = document.getElementById('0')
+const cell1 = document.getElementById('1')
+const cell2 = document.getElementById('2')
+const cell3 = document.getElementById('3')
+const cell4 = document.getElementById('4')
+const cell5 = document.getElementById('5')
+const cell6 = document.getElementById('6')
+const cell7 = document.getElementById('7')
+const cell8 = document.getElementById('8')
 
 // $('#sign-up').on('submit', authEvents.onSignUp)
 
@@ -47,11 +47,16 @@ const cell8 = document.getElementById('cell8')
 let cells = ['', '', '', '', '', '', '', '', '']
 let over = false
 let currentPlayer = null
+// const board = $('.board')
 
 // onClickCell plays X if movesMade is odd.
 // It playes O if movesMade is even.
-const onClickCell = function () {
-  const index = $(event.target).attr("class").replace('cell id', '')
+const storeMove = function (currentPlayer, arrayIndex) {
+    // put currentPlayer into specific array index of cells.
+    cells[arrayIndex] = currentPlayer
+}
+const onClickCell = function (event) {
+  // const index = $(event.target).attr('class').replace('cell id', '')
   // if statement for when cell is unplayed.
   if (event.target.innerHTML === '' && over === false) {
     console.log(`the starting inner html is: ${event.target.innerHTML}`)
@@ -60,10 +65,15 @@ const onClickCell = function () {
     if (movesMade % 2 === 1) {
       event.target.innerHTML = 'x'
       currentPlayer = 'x'
+      // cells = $('.board').map((i, board) => board.innerHTML).get()
+      // console.log(cells)
     } else {
       event.target.innerHTML = 'o'
       currentPlayer = 'o'
     }
+     const arrayIndex = $(event.target).attr('id')
+    // TODO make this dynamic
+     storeMove(currentPlayer, arrayIndex)
     // else statement from first if statement.
   } else {
     console.log('not an empty string')
