@@ -2,24 +2,23 @@
 
 $dark-khaki: #bdb76b;
 $white-smoke: #f5f5f5;
+$tritanopia: #bc8b8b;
+$achromatomaly: #b0a591;
+$dim-grey: #696969;
+$failure-red: #f00;
+$success-green: #008000;
 
 body {
   background-color: $white-smoke;
-  color: DimGrey;
+  color: $dim-grey;
   font-family: 'Questrial', sans-serif;
   margin-top: 45px;
 }
 
 .board {
-  // font-size: 1rem;
-  // height: 80vh;
   height: 300px;
   margin: 0 auto;
-  // max-height: 45vh;
-  // max-height: 300px;
-  // max-width: 45vh;
-  // max-width: 300px;
-  // width: 80vh;
+
   width: 300px;
 }
 
@@ -30,8 +29,8 @@ body {
 .cell {
   // background: DimGrey;
   align-items: center;
-  border: 1px solid DimGrey;
-  color: DimGrey;
+  border: 1px solid $dim-grey;
+  color: $dim-grey;
   display: flex;
   flex: 1 0 auto;
   // font-family: 'Catamaran', sans-serif;
@@ -69,11 +68,11 @@ body {
   text-align: center;
 
   &.success {
-    color: green;
+    color: $success-green;
   }
 
   &.failure {
-    color: red;
+    color: $failure-red;
   }
 }
 
@@ -88,7 +87,7 @@ body {
   background-color: $white-smoke;
   border: solid $white-smoke;
   border-radius: 4px;
-  color: DimGrey;
+  color: $dim-grey;
   display: inline-block;
   font-family: 'Questrial', sans-serif;
   font-size: 15px;
@@ -107,7 +106,7 @@ body {
   background-color: $white-smoke;
   border: solid $white-smoke;
   border-radius: 4px;
-  color: DimGrey;
+  color: $dim-grey;
   display: inline-block;
   font-family: 'Questrial', sans-serif;
   font-size: 15px;
@@ -126,7 +125,7 @@ body {
   background-color: $dark-khaki;
   border: solid $dark-khaki;
   border-radius: 4px;
-  color: DimGrey;
+  color: $dim-grey;
   display: inline-block;
   font-family: 'Questrial', sans-serif;
   font-size: 15px;
@@ -149,7 +148,7 @@ body {
   background-color: $dark-khaki;
   border: solid $dark-khaki;
   border-radius: 4px;
-  color: DimGrey;
+  color: $dim-grey;
   display: inline-block;
   font-family: 'Questrial', sans-serif;
   font-size: 15px;
@@ -159,8 +158,8 @@ body {
   width: 75px;
 
   &:hover {
-    background-color: #bc9881;
-    border: solid #bc9881;
+    background-color: $dark-khaki;
+    border: solid $dark-khaki;
     border-radius: 4px;
     color: $white-smoke;
     cursor: pointer;
@@ -169,10 +168,10 @@ body {
 }
 
 .modal-change-password {
-  background-color: #b0a591;
-  border: solid #b0a591;
+  background-color: $achromatomaly;
+  border: solid $achromatomaly;
   border-radius: 4px;
-  color: DimGrey;
+  color: $dim-grey;
   display: inline-block;
   font-family: 'Questrial', sans-serif;
   font-size: 15px;
@@ -182,8 +181,8 @@ body {
   width: 75px;
 
   &:hover {
-    background-color: #b0a591;
-    border: solid #b0a591;
+    background-color: $achromatomaly;
+    border: solid $achromatomaly;
     border-radius: 4px;
     color: $white-smoke;
     cursor: pointer;
@@ -192,10 +191,10 @@ body {
 }
 
 .modal-signout {
-  background-color: #bc8b8b;
-  border: solid #bc8b8b;
+  background-color: $tritanopia;
+  border: solid $tritanopia;
   border-radius: 4px;
-  color: DimGrey;
+  color: $dim-grey;
   display: inline-block;
   font-family: 'Questrial', sans-serif;
   font-size: 15px;
@@ -205,8 +204,8 @@ body {
   width: 75px;
 
   &:hover {
-    background-color: #bc8b8b;
-    border: solid #bc8b8b;
+    background-color: $tritanopia;
+    border: solid $tritanopia;
     border-radius: 4px;
     color: $white-smoke;
     cursor: pointer;
@@ -215,45 +214,5 @@ body {
 }
 
 .modal-backdrop {
-   background-color: $white-smoke;
+  background-color: $white-smoke;
 }
-
-// .signup {
-//   background-color: Tomato;
-//   // border: solid $white-smoke;
-//   border-radius: 4px;
-//   color: $white-smoke;
-//   font-family: 'Questrial', sans-serif;
-//   font-size: 15px;
-//   margin: 20px;
-//   outline: none !important;
-//   padding: 10px;
-//
-// }
-
-// forces box to remain square.
-// .cell:after {
-//   content: '';
-//   // makes width stretch to 100%.
-//   display: block;
-//   float: left;
-//   // sets height to 100%, equal to width.
-//   padding-top: 100%;
-// }
-
-// .cell .text {
-//   align-items: center;
-//   bottom: 0;
-//   display: flex;
-//   justify-content: center;
-//   left: 0;
-//   position: absolute;
-//   right: 0;
-//   top: 0;
-// }
-
-
-// .flex-container {
-//   display: flex;
-// }
-// code based on: http://bluecaret.com/blog/responsive-grid-of-squares
