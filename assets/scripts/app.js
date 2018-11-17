@@ -18,6 +18,8 @@ $(document).ready(function () {
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('submit', authEvents.onSignOut)
+  $('.cell').click(onClickCell)
+  $('.reset').click(onClickReset)
 
   $('body').on('hidden.bs.modal', '.modal', function () {
     $(this).find('input[type="text"], input[type="password"],textarea,select').each(function () {
@@ -26,8 +28,6 @@ $(document).ready(function () {
       } else { this.value = '' }
     })
   })
-  // $('.cell').on('click', events.onClickCell)
-  // $('.cell').on('click', .onClickCell)
 })
 
 let movesMade = 0
@@ -52,8 +52,8 @@ let currentPlayer = null
 // onClickCell plays X if movesMade is odd.
 // It playes O if movesMade is even.
 const storeMove = function (currentPlayer, arrayIndex) {
-    // put currentPlayer into specific array index of cells.
-    cells[arrayIndex] = currentPlayer
+  // put currentPlayer into specific array index of cells.
+  cells[arrayIndex] = currentPlayer
 }
 const onClickCell = function (event) {
   // const index = $(event.target).attr('class').replace('cell id', '')
@@ -71,9 +71,9 @@ const onClickCell = function (event) {
       event.target.innerHTML = 'o'
       currentPlayer = 'o'
     }
-     const arrayIndex = $(event.target).attr('id')
+    const arrayIndex = $(event.target).attr('id')
     // TODO make this dynamic
-     storeMove(currentPlayer, arrayIndex)
+    storeMove(currentPlayer, arrayIndex)
     // else statement from first if statement.
   } else {
     console.log('not an empty string')
@@ -86,8 +86,6 @@ const onClickCell = function (event) {
     checkForWinner()
   }
 }
-
-$('.cell').click(onClickCell)
 
 const onClickReset = function () {
   movesMade = 0
@@ -102,8 +100,6 @@ const onClickReset = function () {
   console.log(`Is the game over: ${over}`)
   console.log(`number of moves made: ${movesMade}`)
 }
-
-$('.reset').click(onClickReset)
 
 const isAWinner = function () {
   over = true
@@ -145,3 +141,6 @@ const checkForWinner = function () {
     isADraw()
   }
 }
+
+// possible future jQuery solution.
+// if ($('#cell0').html !== '' && cell0.innerHTML === cell1.innerHTML && cell0.innerHTML === cell2.innerHTML) {

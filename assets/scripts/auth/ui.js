@@ -87,6 +87,6 @@ module.exports = {
   signInFailure,
   changePasswordSuccess,
   changePasswordFailure,
-  signOutSuccess,
-  signOutFailure
+  // signOutSuccess,
+  // signOutFailure
 }
