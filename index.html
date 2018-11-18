@@ -18,10 +18,8 @@
     </head>
     <body>
       <!-- <div class="container"> -->
-        <div>
-          <center>
-            <h1>tic tac toe</h1>
-          </center>
+        <div style="text-align: center;">
+          <h1>tic tac toe</h1>
         </div>
 
       <div class="buttons-container">
@@ -34,9 +32,11 @@
           <span><button type="button" class="menu-buttons" data-toggle="modal" data-target="#signInModal">sign in</button></span>
         </div>
         <div id="signed-in">
+          <span><button class="new-game">play</button></span>
+          <span> | </span>
           <span><button class="reset">reset</button></span>
           <span> | </span>
-          <span><button type="button" class="menu-buttons" data-toggle="modal" data-target="#changePasswordModal">change password</button></span>
+          <span><button type="button" class="menu-buttons" data-toggle="modal" data-target="#changePasswordModal">account</button></span>
           <span> | </span>
           <span><button type="button" class="menu-buttons" data-toggle="modal" data-target="#signOutModal">sign out</button></span>
         </div>
@@ -130,7 +130,7 @@
                 <button type="button" data-dismiss="modal"><span>&times;</span></button>
                 </div>
                 <div class="modal-body">
-                  <form id="sign-out" class="border">
+                  <form id="sign-out">
                     <fieldset>
                       <legend>sign out</legend>
                       <input type="submit" value="sign out" class="modal-signout">

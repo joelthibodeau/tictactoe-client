@@ -18,6 +18,7 @@ $(document).ready(function () {
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('submit', authEvents.onSignOut)
+  $('#new-game').on('click', authEvents.onNewGame)
   $('.cell').click(onClickCell)
   $('.reset').click(onClickReset)
 
@@ -55,6 +56,7 @@ const storeMove = function (currentPlayer, arrayIndex) {
   // put currentPlayer into specific array index of cells.
   cells[arrayIndex] = currentPlayer
 }
+
 const onClickCell = function (event) {
   // const index = $(event.target).attr('class').replace('cell id', '')
   // if statement for when cell is unplayed.

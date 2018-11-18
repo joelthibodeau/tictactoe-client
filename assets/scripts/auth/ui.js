@@ -80,6 +80,26 @@ const signOutFailure = error => {
   emptyMessage()
 }
 
+const newGameSuccess = data => {
+  console.log(data.user.token)
+  // $('.message').text('You created a new game!')
+  // $('.message').attr('class', 'message')
+  // $('.message').addClass('success')
+  // found 'store.game = data.game' here:
+  // https://git.generalassemb.ly/ga-wdi-boston/game-project-api/issues/23
+  store.game = data.game
+  console.log('newGameSuccess ran. Data is:', data)
+  emptyMessage()
+}
+
+const newGameFailure = error => {
+  // $('.message').text('error on create new game')
+  // $('.message').attr('class', 'message')
+  // $('.message').addClass('failure')
+  console.error('newGameFailure ran. Error is :', error)
+  emptyMessage()
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -87,6 +107,8 @@ module.exports = {
   signInFailure,
   changePasswordSuccess,
   changePasswordFailure,
-  // signOutSuccess,
-  // signOutFailure
+  signOutSuccess,
+  signOutFailure,
+  newGameSuccess,
+  newGameFailure
 }

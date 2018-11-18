@@ -3,6 +3,8 @@
 const config = require('../config.js')
 const store = require('../store.js')
 
+// store.game.index = $(event.target).data('id')
+
 const signUp = data => {
   return $.ajax({
     url: config.apiUrl + '/sign-up',
@@ -40,9 +42,21 @@ const signOut = () => {
   })
 }
 
+const newGame = data => {
+  return $.ajax({
+    url: config.apiUrl + '/games',
+    method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: {}
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   changePassword,
-  signOut
+  signOut,
+  newGame
 }

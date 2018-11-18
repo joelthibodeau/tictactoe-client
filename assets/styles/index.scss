@@ -102,7 +102,29 @@ body {
   }
 }
 
+.new-game {
+  background-color: $white-smoke;
+  border: solid $white-smoke;
+  border-radius: 4px;
+  color: $dim-grey;
+  display: inline-block;
+  font-family: 'Questrial', sans-serif;
+  font-size: 15px;
+  // margin: 12px;
+  outline: none !important;
+  // padding: 20px;
+
+  &:hover {
+    background-color: $white-smoke;
+    color: $dark-khaki;
+    cursor: pointer;
+  }
+}
+
 .menu-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: $white-smoke;
   border: solid $white-smoke;
   border-radius: 4px;
