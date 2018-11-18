@@ -1,7 +1,7 @@
 'use strict'
 
 const getFormFields = require('../../../lib/get-form-fields.js')
-const addNestedValue = require('../../../lib/add-nested-value.js')
+// const addNestedValue = require('../../../lib/add-nested-value.js')
 const api = require('./api.js')
 const ui = require('./ui.js')
 
@@ -40,19 +40,11 @@ const onSignOut = event => {
     .catch(ui.signOutFailure)
 }
 
-const onNewGame = event => {
-  event.preventDefault()
-  const data = getFormFields(event.target)
-  console.log('onNewGame ran.')
-  api.newGame(data)
-    .then(ui.newGameSuccess)
-    .catch(ui.newGameFailure)
-}
+// NEED TO CREATE NEW FUNCTION FOR CREATING NEW AUTH HANDLERS
 
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
-  onSignOut,
-  onNewGame
+  onSignOut
 }
