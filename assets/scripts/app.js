@@ -19,7 +19,9 @@ $(document).ready(function () {
   authEvents.addAuthHandlers()
   gamePlayEvents.addGamePlayHandlers()
   $('.cell').click(onClickCell)
-  $('.reset').click(onClickReset)
+  // $('.reset').click(onClickReset)
+  $('.new-game').click(onClickReset)
+  $('#signOutModal').click(onClickReset)
 
   $('body').on('hidden.bs.modal', '.modal', function () {
     $(this).find('input[type="text"], input[type="password"],textarea,select').each(function () {
