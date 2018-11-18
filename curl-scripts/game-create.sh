@@ -1,7 +1,8 @@
 # sh curl-scripts/json/game-create.sh
+# https://git.generalassemb.ly/ga-wdi-boston/game-project/issues/1850
 
-curl --include \
-  --request POST "https://tic-tac-toe-wdi.herokuapp.com/games/" \
+curl --include \ "https://tic-tac-toe-wdi.herokuapp.com/games/" \
+  --request POST \
   --header "Content-Type: application/json" \
   --header "Authorization: Token token=${TOKEN}" \
   --data '{

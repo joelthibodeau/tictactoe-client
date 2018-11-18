@@ -10,15 +10,14 @@
 
 // A $( document ).ready() block.
 const authEvents = require('./auth/events.js')
+const gamePlayEvents = require('./game-play/events.js')
+const gamePlayApi = require('./game-play/api.js')
+const store = require('./store.js')
 
 $(document).ready(function () {
   // console.log('ready!')
-  $('#signed-in').hide()
-  $('#sign-up').on('submit', authEvents.onSignUp)
-  $('#sign-in').on('submit', authEvents.onSignIn)
-  $('#change-password').on('submit', authEvents.onChangePassword)
-  $('#sign-out').on('submit', authEvents.onSignOut)
-  $('#new-game').on('click', authEvents.onNewGame)
+  authEvents.addAuthHandlers()
+  gamePlayEvents.addGamePlayHandlers()
   $('.cell').click(onClickCell)
   $('.reset').click(onClickReset)
 
@@ -48,10 +47,13 @@ const cell8 = document.getElementById('8')
 let cells = ['', '', '', '', '', '', '', '', '']
 let over = false
 let currentPlayer = null
+// let gameMoves = null
 // const board = $('.board')
 
 // onClickCell plays X if movesMade is odd.
 // It playes O if movesMade is even.
+
+
 const storeMove = function (currentPlayer, arrayIndex) {
   // put currentPlayer into specific array index of cells.
   cells[arrayIndex] = currentPlayer
@@ -60,7 +62,8 @@ const storeMove = function (currentPlayer, arrayIndex) {
 const onClickCell = function (event) {
   // const index = $(event.target).attr('class').replace('cell id', '')
   // if statement for when cell is unplayed.
-  if (event.target.innerHTML === '' && over === false) {
+  let arrayIndex
+  if (event.target.innerHTML === '' && over === false && store.game !== undefined) {
     console.log(`the starting inner html is: ${event.target.innerHTML}`)
     movesMade++
     console.log(`number of moves made: ${movesMade}`)
@@ -73,10 +76,14 @@ const onClickCell = function (event) {
       event.target.innerHTML = 'o'
       currentPlayer = 'o'
     }
-    const arrayIndex = $(event.target).attr('id')
+    arrayIndex = $(event.target).attr('id')
     // TODO make this dynamic
     storeMove(currentPlayer, arrayIndex)
     // else statement from first if statement.
+    checkForWinner()
+    gamePlayApi.updateGameMoves(over, arrayIndex, currentPlayer)
+    // then passes return of ajax request into console log
+      .then(console.log)
   } else {
     console.log('not an empty string')
   }
@@ -84,9 +91,6 @@ const onClickCell = function (event) {
   console.log(`the ending inner html is: ${event.target.innerHTML}`)
   console.log(cells)
   console.log(`Is the game over: ${over}`)
-  if (over === false) {
-    checkForWinner()
-  }
 }
 
 const onClickReset = function () {
@@ -94,6 +98,7 @@ const onClickReset = function () {
   cells = ['', '', '', '', '', '', '', '', '']
   over = false
   currentPlayer = null
+  store.game = undefined
   $('.winner').html('')
   $('.cell').html('')
 

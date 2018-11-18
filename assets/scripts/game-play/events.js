@@ -4,15 +4,20 @@
 const api = require('./api.js')
 const ui = require('./ui.js')
 
-const onNewGame = event => {
+const onCreateGame = event => {
   event.preventDefault()
   // const data = getFormFields(event.target) NO NEED FOR THIS?
-  console.log('onNewGame ran.')
-  api.newGame(data)
-    .then(ui.newGameSuccess)
-    .catch(ui.newGameFailure)
+  console.log('onCreateGame ran.')
+  api.createGame()
+    .then(ui.createGameSuccess)
+    .catch(ui.createGameFailure)
+}
+
+const addGamePlayHandlers = () => {
+  $('.new-game').on('click', onCreateGame)
 }
 
 module.exports = {
-  onNewGame
+  onCreateGame,
+  addGamePlayHandlers
 }

@@ -42,21 +42,9 @@ const signOut = () => {
   })
 }
 
-const newGame = data => {
-  return $.ajax({
-    url: config.apiUrl + '/games',
-    method: 'POST',
-    headers: {
-      Authorization: 'Token token=' + store.user.token
-    },
-    data: {}
-  })
-}
-
 module.exports = {
   signUp,
   signIn,
   changePassword,
-  signOut,
-  newGame
+  signOut
 }

@@ -40,11 +40,16 @@ const onSignOut = event => {
     .catch(ui.signOutFailure)
 }
 
+const addAuthHandlers = () => {
+  $('#signed-in').hide()
+  $('#sign-up').on('submit', onSignUp)
+  $('#sign-in').on('submit', onSignIn)
+  $('#change-password').on('submit', onChangePassword)
+  $('#sign-out').on('submit', onSignOut)
+}
+
 // NEED TO CREATE NEW FUNCTION FOR CREATING NEW AUTH HANDLERS
 
 module.exports = {
-  onSignUp,
-  onSignIn,
-  onChangePassword,
-  onSignOut
+  addAuthHandlers
 }
