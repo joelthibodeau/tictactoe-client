@@ -66,9 +66,9 @@ const onClickCell = function (event) {
   // if statement for when cell is unplayed.
   let arrayIndex
   if (event.target.innerHTML === '' && over === false && store.game !== undefined) {
-    console.log(`the starting inner html is: ${event.target.innerHTML}`)
+    // console.log(`the starting inner html is: ${event.target.innerHTML}`)
     movesMade++
-    console.log(`number of moves made: ${movesMade}`)
+    // console.log(`number of moves made: ${movesMade}`)
     if (movesMade % 2 === 1) {
       event.target.innerHTML = 'x'
       currentPlayer = 'x'
@@ -85,14 +85,14 @@ const onClickCell = function (event) {
     checkForWinner()
     gamePlayApi.updateGameMoves(over, arrayIndex, currentPlayer)
     // then passes return of ajax request into console log
-      .then(console.log)
+    // .then(console.log)
   } else {
-    console.log('not an empty string')
+    // console.log('not an empty string')
   }
-  console.log(`currrent piece played is ${currentPlayer}`)
-  console.log(`the ending inner html is: ${event.target.innerHTML}`)
-  console.log(cells)
-  console.log(`Is the game over: ${over}`)
+  // console.log(`currrent piece played is ${currentPlayer}`)
+  // console.log(`the ending inner html is: ${event.target.innerHTML}`)
+  // console.log(cells)
+  // console.log(`Is the game over: ${over}`)
 }
 
 const onClickReset = function () {
@@ -104,28 +104,28 @@ const onClickReset = function () {
   $('.winner').html('')
   $('.cell').html('')
 
-  console.log(`currrent piece played is ${currentPlayer}`)
-  console.log(cells)
-  console.log(`Is the game over: ${over}`)
-  console.log(`number of moves made: ${movesMade}`)
+  // console.log(`currrent piece played is ${currentPlayer}`)
+  // console.log(cells)
+  // console.log(`Is the game over: ${over}`)
+  // console.log(`number of moves made: ${movesMade}`)
 }
 
 const isAWinner = function () {
   over = true
   $('.winner').html(`${currentPlayer} wins!`)
-  console.log(`Is the game over: ${over}`)
-  console.log('win')
+  // console.log(`Is the game over: ${over}`)
+  // console.log('win')
 }
 
 const isADraw = function () {
   over = true
   $('.winner').html(`it's a draw!`)
-  console.log(`Is the game over: ${over}`)
-  console.log(`It's a draw.`)
+  // console.log(`Is the game over: ${over}`)
+  // console.log(`It's a draw.`)
 }
 
 const checkForWinner = function () {
-  console.log('check for winner runs')
+  // console.log('check for winner runs')
   // check for all possible wins
   // check all rows
   if (cell0.innerHTML !== '' && cell0.innerHTML === cell1.innerHTML && cell0.innerHTML === cell2.innerHTML) {

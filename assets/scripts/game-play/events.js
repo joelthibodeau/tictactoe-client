@@ -7,7 +7,7 @@ const ui = require('./ui.js')
 const onCreateGame = event => {
   event.preventDefault()
   // const data = getFormFields(event.target) NO NEED FOR THIS?
-  console.log('onCreateGame ran.')
+  // console.log('onCreateGame ran.')
   api.createGame()
     .then(ui.createGameSuccess)
     .catch(ui.createGameFailure)

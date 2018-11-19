@@ -35,7 +35,7 @@ const updateGameMoves = (over, index, value) => {
       'over': over
     }
   }
-  console.log('game moves', gameMoves)
+  // console.log('game moves', gameMoves)
   return $.ajax({
     url: config.apiUrl + '/games/' + store.game.id,
     method: 'PATCH',

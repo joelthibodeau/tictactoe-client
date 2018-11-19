@@ -12,7 +12,7 @@ const signUpSuccess = data => {
   $('.message').text('signed up successfully')
   $('.message').attr('class', 'message') // removes all classes except the default class of 'message'
   $('.message').addClass('success')
-  console.log('signUpSucces ran. Data is:', data)
+  // console.log('signUpSucces ran. Data is:', data)
   emptyMessage()
 }
 
@@ -32,7 +32,7 @@ const signInSuccess = data => {
   $('.message').text('signed in successfully')
   $('.message').attr('class', 'message')
   $('.message').addClass('success')
-  console.log('signInSuccess ran. Data is:', data)
+  // console.log('signInSuccess ran. Data is:', data)
   emptyMessage()
 }
 
@@ -49,7 +49,7 @@ const changePasswordSuccess = data => {
   $('.message').text('changed password successfully')
   $('.message').attr('class', 'message')
   $('.message').addClass('success')
-  console.log('changedPasswordSuccess ran. Data is:', data)
+  // console.log('changedPasswordSuccess ran. Data is:', data)
   emptyMessage()
 }
 
@@ -68,7 +68,7 @@ const signOutSuccess = data => {
   store.user = {} // or = null
   $('.message').attr('class', 'message')
   $('.message').addClass('success')
-  console.log('signOutSuccess ran. Data is:', data)
+  // console.log('signOutSuccess ran. Data is:', data)
   emptyMessage()
 }
 

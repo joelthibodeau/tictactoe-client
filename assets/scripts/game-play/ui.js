@@ -10,7 +10,7 @@ const createGameSuccess = data => {
   // found 'store.game = data.game' here:
   // https://git.generalassemb.ly/ga-wdi-boston/game-project-api/issues/23
   store.game = data.game
-  console.log('createGameSuccess ran. Data is:', data)
+  // console.log('createGameSuccess ran. Data is:', data)
 }
 
 const createGameFailure = error => {
