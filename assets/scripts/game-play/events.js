@@ -13,6 +13,11 @@ const onCreateGame = event => {
     .catch(ui.createGameFailure)
 }
 
+// const onGetGamesPlayedSuccess = game => {
+//   const getGamesPlayed = game.games.length
+//   $('#allGamesMessage').text(`You have played ${getGames} games so far on this account. Click
+//     past games button again to refresh!`).addClass('allgames')
+
 const addGamePlayHandlers = () => {
   $('.new-game').on('click', onCreateGame)
 }
