@@ -55,7 +55,6 @@ let currentPlayer = null
 // onClickCell plays X if movesMade is odd.
 // It playes O if movesMade is even.
 
-
 const storeMove = function (currentPlayer, arrayIndex) {
   // put currentPlayer into specific array index of cells.
   cells[arrayIndex] = currentPlayer
@@ -83,7 +82,7 @@ const onClickCell = function (event) {
     storeMove(currentPlayer, arrayIndex)
     // else statement from first if statement.
     checkForWinner()
-    gamePlayApi.updateGameMoves(over, arrayIndex, currentPlayer)
+    gamePlayApi.updateGameMoves(over, arrayIndex, currentPlayer, cells)
     // then passes return of ajax request into console log
     // .then(console.log)
   } else {

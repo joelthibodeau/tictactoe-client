@@ -25,7 +25,7 @@ const getGamesPlayed = () => {
   })
 }
 
-const updateGameMoves = (over, index, value) => {
+const updateGameMoves = (over, index, value, cells) => {
   const gameMoves = {
     'game': {
       'cell': {
@@ -35,7 +35,8 @@ const updateGameMoves = (over, index, value) => {
       'over': over
     }
   }
-  // console.log('game moves', gameMoves)
+  console.log('game moves', gameMoves)
+  console.log(cells)
   return $.ajax({
     url: config.apiUrl + '/games/' + store.game.id,
     method: 'PATCH',
