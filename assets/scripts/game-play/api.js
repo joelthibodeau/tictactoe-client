@@ -25,7 +25,7 @@ const getGamesPlayed = () => {
   })
 }
 
-const updateGameMoves = (over, index, value, cells) => {
+const updateGameMoves = (over, index, value, cell) => {
   const gameMoves = {
     'game': {
       'cell': {

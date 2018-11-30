@@ -18,10 +18,24 @@ const onGetStats = event => {
   // console.log('onGetStats ran.')
   api.getGamesPlayed()
     .then((result) => {
-      console.log(result)
-      $('#gameStatsData').html('hey')
+      // console.log(result)
+      // code inspired by memory game exercise
+      // 1. create new div
+      // 2. add id to newly created div
+      // 3. add class to newly created div
+      // 4. make newly created div the child of #gameStatsData div
+      // 5. add game stats result to the newly created div for specific game
+      for (let i = 0; i < result.games.length; i++) {
+        const elementStats = document.createElement('div') // 1.
+        elementStats.setAttribute('id', 'stats-game-' + i) // 2.
+        elementStats.setAttribute('class', 'stats-game-element') // 3.
+        document.getElementById('gameStatsData').appendChild(elementStats) // 4.
+        document.getElementById('stats-game-' + i).innerHTML = 'Game #' + (i + 1) + ' pieces played: ' + result.games[i].cells // 5.
+      }
     })
-    // .catch(ui.createGameFailure)
+    .catch((error) => {
+      console.log(error)
+    })
 }
 
 // const onGetGamesPlayedSuccess = game => {
