@@ -30,7 +30,7 @@ const onGetStats = event => {
         elementStats.setAttribute('id', 'stats-game-' + i) // 2.
         elementStats.setAttribute('class', 'stats-game-element') // 3.
         document.getElementById('gameStatsData').appendChild(elementStats) // 4.
-        document.getElementById('stats-game-' + i).innerHTML = 'Game #' + (i + 1) + ' pieces played: ' + result.games[i].cells // 5.
+        document.getElementById('stats-game-' + i).innerHTML = 'Game #' + (i + 1) + ' .' + '.' + '.' + '.' + '.' + '.' + '. ' +  ' moves played: ' + result.games[i].cells // 5.
       }
     })
     .catch((error) => {
