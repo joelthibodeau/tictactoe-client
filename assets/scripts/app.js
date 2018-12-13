@@ -1,13 +1,5 @@
 'use strict'
 
-// use require with a reference to bundle the file and use it in this file
-// const example = require('./example')
-
-// use require without a reference to ensure a file is bundled
-// require('./example')
-
-// const authEvents = require('./auth/events.js')
-
 // A $( document ).ready() block.
 const authEvents = require('./auth/events.js')
 const gamePlayEvents = require('./game-play/events.js')
@@ -43,23 +35,19 @@ const cell6 = document.getElementById('6')
 const cell7 = document.getElementById('7')
 const cell8 = document.getElementById('8')
 
-// $('#sign-up').on('submit', authEvents.onSignUp)
-
 // creates array with 9 empty strings as values.
 let cells = ['', '', '', '', '', '', '', '', '']
 let over = false
 let currentPlayer = null
-// let gameMoves = null
-// const board = $('.board')
 
-// onClickCell plays X if movesMade is odd.
-// It playes O if movesMade is even.
-
+// declare function storeMove to store games on database.
 const storeMove = function (currentPlayer, arrayIndex) {
   // put currentPlayer into specific array index of cells.
   cells[arrayIndex] = currentPlayer
 }
 
+// onClickCell plays X if movesMade is odd.
+// It playes O if movesMade is even.
 const onClickCell = function (event) {
   // const index = $(event.target).attr('class').replace('cell id', '')
   // if statement for when cell is unplayed.
